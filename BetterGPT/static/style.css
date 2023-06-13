@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 7, 15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#logo {
+    width: 200px;
+    border-radius: 25%;
+    margin: 20px;
+}
+
+#logo-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 5px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 14px;
+    bottom: 200;
+    color: rgb(218, 218, 218);
+}
+
+#main-content {
+    display: none;
+}
+
+#sliders {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-end;
+    padding-top: 50px;
+    width: 15vw;
+    background-color: rgb(3, 12, 31);
+    height: 95vh;
+}
+
+.slider-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.slider-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.slider-container input[type="range"] {
+    width: 90%;
+    appearance: none;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: 20px 0;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider-container input[type="range"]:focus {
+    outline: none;
+}
+
+.slider-container input[type="range"]:hover {
+    opacity: 1;
+}
+
+.slider-info {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+    background-color: rgb(2, 37, 78);
+    border-radius: 10px;
+}
+
+.slider-container input[type="range"]::-moz-range-track {
+    background-color: rgb(2, 37, 78);
+    border-radius: 10px;
+}
+
+.slider-container input[type="range"]::-ms-track {
+    background-color: rgb(2, 37, 78);
+    border-radius: 10px;
+}
+
+#centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    width: 85vw;
+}
+
+#centered-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#centered-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#query-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #00244f;
+    border: none;
+    border-radius: 10px;
+    width: 50vw;
+    vertical-align: middle;
+    padding: 10px;
+    position: absolute;
+    bottom: 50px;
+}
+
+#query-input {
+    padding: 5px;
+    width: 300px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: medium;
+    padding: 5px;
+    resize: none;
+    height: fit-content;
+    columns: unset;
+    transition: height 0.2s;
+    height: 20px;
+    max-height: 150px;
+}
+
+#send-button {
+    padding: 10px 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+textarea:focus {
+    outline: none;
+    margin: auto;
+}
+
+.sent-text{
+    background-color: #000e1f;
+}
+.reply-text{
+    background-color: #002048;
+}
+
+#conversation{
+    width: 75%;
+    margin: 25px;
+    max-height: 85vh;
+    overflow-y: auto;
+    transition: 0.2s;
+    scroll-behavior: smooth;
+}
+
+.message{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow-x: auto;
+    color: white;
+    font-size: medium;
+    border: none;
+    resize: none;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

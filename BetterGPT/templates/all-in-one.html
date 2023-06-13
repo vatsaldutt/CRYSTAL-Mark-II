@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BetterGPT</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(2, 7, 15);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        #loading-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #logo {
+            width: 200px;
+            border-radius: 25%;
+            margin: 20px;
+        }
+
+        #logo-text {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 5px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 14px;
+            bottom: 200;
+            color: rgb(218, 218, 218);
+        }
+
+        #main-content {
+            display: none;
+        }
+
+        #sliders {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            align-items: flex-end;
+            padding-top: 50px;
+            width: 15vw;
+            background-color: rgb(3, 12, 31);
+            height: 95vh;
+        }
+
+        .slider-container {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+        .slider-container label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .slider-container input[type="range"] {
+            width: 90%;
+            appearance: none;
+            height: 5px;
+            background: #ddd;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            margin: 20px 0;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: #00244f;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-container input[type="range"]::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-container input[type="range"]:focus {
+            outline: none;
+        }
+
+        .slider-container input[type="range"]:hover {
+            opacity: 1;
+        }
+
+        .slider-info {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-runnable-track {
+            background-color: #596067;
+            border-radius: 10px;
+        }
+
+        .slider-container input[type="range"]::-moz-range-track {
+            background-color: #596067;
+            border-radius: 10px;
+        }
+
+        .slider-container input[type="range"]::-ms-track {
+            background-color: #596067;
+            border-radius: 10px;
+        }
+
+        #centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            width: 85vw;
+        }
+
+        #centered-content h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        #centered-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        #query-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #00244f;
+            border: none;
+            border-radius: 10px;
+            width: 50vw;
+            vertical-align: middle;
+            padding: 10px;
+            position: absolute;
+            bottom: 50px;
+        }
+
+        #query-input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+            background-color: transparent;
+            border: none;
+            width: 95%;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: medium;
+            padding: 5px;
+            resize: none;
+            height: fit-content;
+            columns: unset;
+            transition: height 0.2s;
+            height: 20px;
+            max-height: 150px;
+        }
+
+        #send-button {
+            padding: 10px 10px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        textarea:focus {
+            outline: none;
+            margin: auto;
+        }
+
+        .sent-text {
+            background-color: #000e1f;
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        #conversation {
+            width: 90%;
+            margin: 25px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <img id="logo" src="{{ url_for('static', filename='Crystal Logo.jpg') }}" alt="CRYSTAL Logo">
+        <div id="logo-text">
+            <h1>BetterGPT</h1>
+            <p>Powered by CRYSTAL</p>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="sliders">
+            <div class="slider-container">
+                <div class="slider-info">
+                    <label for="temperature-slider">Temperature:</label>
+                    <span id="temperature-value">0.4</span>
+                </div>
+                <input type="range" id="temperature-slider" min="0" max="1" step="0.01" value="0.4">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-info">
+                    <label for="top-p-slider">Top p:</label>
+                    <span id="top-p-value">0.65</span>
+                </div>
+                <input type="range" id="top-p-slider" min="0" max="1" step="0.01" value="0.65">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-info">
+                    <label for="top-k-slider">Top k:</label>
+                    <span id="top-k-value">35</span>
+                </div>
+                <input type="range" id="top-k-slider" min="0" max="512" step="1" value="35">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-info">
+                    <label for="repeat-penalty-slider">Repeat Penalty:</label>
+                    <span id="repeat-penalty-value">1.1</span>
+                </div>
+                <input type="range" id="repeat-penalty-slider" min="0" max="2" step="0.01" value="1.1">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-info">
+                    <label for="max-tokens-slider">Max tokens:</label>
+                    <span id="max-tokens-value">512</span>
+                </div>
+                <input type="range" id="max-tokens-slider" min="1" max="2048" step="1" value="512">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-info">
+                    <label for="max-history-slider">Max history messages:</label>
+                    <span id="max-history-value">5</span>
+                </div>
+                <input type="range" id="max-history-slider" min="1" max="20" step="1" value="5">
+            </div>
+        </div>
+        <div id="centered-content">
+            <div id="main">
+                <h1>BetterGPT</h1>
+                <p>A powerful language model for all your needs.</p>
+            </div>
+            <div id="conversation">
+
+            </div>
+            <!-- <form id="query-form" action="process-query" method="POST"> -->
+            <div id="query-container">
+                <textarea id="query-input" name="query-input" placeholder="Enter your query"></textarea>
+                <button id="send-button"><img src="{{ url_for('static', filename='Send Icon.png') }}" alt="Send"
+                        width="20px"></button>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+
+
+
+    <script>
+        window.addEventListener('load', function () {
+            var loadingScreen = document.getElementById('loading-screen');
+            var mainContent = document.getElementById('main-content');
+
+            // Sliders
+            var temperatureSlider = document.getElementById('temperature-slider');
+            var temperatureValue = document.getElementById('temperature-value');
+
+            var topPSlider = document.getElementById('top-p-slider');
+            var topPValue = document.getElementById('top-p-value');
+
+            var topKSlider = document.getElementById('top-k-slider');
+            var topKValue = document.getElementById('top-k-value');
+
+            var repeatPenaltySlider = document.getElementById('repeat-penalty-slider');
+            var repeatPenaltyValue = document.getElementById('repeat-penalty-value');
+
+            var maxTokensSlider = document.getElementById('max-tokens-slider');
+            var maxTokensValue = document.getElementById('max-tokens-value');
+
+            var maxHistorySlider = document.getElementById('max-history-slider');
+            var maxHistoryValue = document.getElementById('max-history-value');
+
+            // Update span value when slider value changes
+            temperatureSlider.addEventListener('input', function () {
+                temperatureValue.textContent = temperatureSlider.value;
+            });
+
+            topPSlider.addEventListener('input', function () {
+                topPValue.textContent = topPSlider.value;
+            });
+
+            topKSlider.addEventListener('input', function () {
+                topKValue.textContent = topKSlider.value;
+            });
+
+            repeatPenaltySlider.addEventListener('input', function () {
+                repeatPenaltyValue.textContent = repeatPenaltySlider.value;
+            });
+
+            maxTokensSlider.addEventListener('input', function () {
+                maxTokensValue.textContent = maxTokensSlider.value;
+            });
+
+            maxHistorySlider.addEventListener('input', function () {
+                maxHistoryValue.textContent = maxHistorySlider.value;
+            });
+
+            var centeredContent = document.getElementById('centered-content');
+            var queryContainer = document.getElementById('query-container');
+            var queryInput = document.getElementById('query-input');
+            var sendButton = document.getElementById('send-button');
+            var conversation = document.getElementById('conversation');
+            var main = document.getElementById('main');
+
+            // Sliders code goes here
+            // Send button functionality
+            sendButton.addEventListener('click', function () {
+                var query = queryInput.value.trim();
+                if (query !== '') {
+                    main.style.display = 'none';
+                    queryInput.value = "";
+                    queryInput.style.height = "20px";
+                    // Display the sent text
+                    var sentText = document.createElement('p');
+                    sentText.className = "sent-text";
+                    sentText.style.padding = "20px";
+                    sentText.textContent = query;
+                    conversation.append(sentText);
+                    centeredContent.style.justifyContent = "start";
+                    conversation.scrollTop = conversation.scrollHeight;
+
+
+                    // fetch('/process-query', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify({ query: query })
+                    // })
+                    // .then(response => {
+                    //     // Handle the response from the server
+                    //     // ...
+                    // })
+                    // .catch(error => {
+                    //     console.error('Error:', error);
+                    // });
+                }
+            });
+
+            queryInput.addEventListener('input', function () {
+                this.style.height = "20px";
+                // console.log(this.scrollHeight);
+                if (this.scrollHeight > 30) {
+                    this.style.height = (this.scrollHeight > 30 ? this.scrollHeight - 10 : this.scrollHeight) + 'px';
+                }
+            });
+
+            queryInput.addEventListener('keydown', function (event) {
+                if (event.shiftKey && event.key === "Enter") {
+                    event.preventDefault();
+                    queryInput.value += '\n';
+                    if (this.scrollHeight > 30) {
+                        this.style.height = (this.scrollHeight > 30 ? this.scrollHeight - 10 : this.scrollHeight) + 'px';
+                    }
+                } else if (event.key === 'Enter') {
+                    event.preventDefault();
+                    sendButton.click();
+                }
+            });
+
+            // Simulate a delay of 2 seconds for the loading screen
+            setTimeout(function () {
+                loadingScreen.style.opacity = '0';
+
+                setTimeout(function () {
+                    loadingScreen.style.display = 'none';
+                    mainContent.style.display = 'flex';
+                }, 1000);
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
