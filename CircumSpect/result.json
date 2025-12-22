@@ -1,0 +1,1004 @@
+{
+  "/Users/vatsal/Desktop/CRYSTAL MARK II/image.png": [
+    {
+      "box": [
+        249.65,
+        37.52,
+        1014.87,
+        704.89
+      ],
+      "score": 1.0,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        291.62,
+        366.16,
+        424.16,
+        489.83
+      ],
+      "score": 0.99,
+      "cap": "a white toilet"
+    },
+    {
+      "box": [
+        369.83,
+        303.18,
+        1056.47,
+        711.86
+      ],
+      "score": 0.97,
+      "cap": "the man is wearing a black shirt"
+    },
+    {
+      "box": [
+        1125.54,
+        1.86,
+        1272.53,
+        362.72
+      ],
+      "score": 0.96,
+      "cap": "a window in the room"
+    },
+    {
+      "box": [
+        572.17,
+        22.76,
+        875.41,
+        393.96
+      ],
+      "score": 0.96,
+      "cap": "the man has short hair"
+    },
+    {
+      "box": [
+        484.42,
+        114.45,
+        547.89,
+        241.48
+      ],
+      "score": 0.92,
+      "cap": "a plant in a white vase"
+    },
+    {
+      "box": [
+        0.0,
+        2.95,
+        242.6,
+        543.6
+      ],
+      "score": 0.92,
+      "cap": "a white door"
+    },
+    {
+      "box": [
+        804.65,
+        248.83,
+        958.89,
+        403.2
+      ],
+      "score": 0.91,
+      "cap": "a brown pillow on the bed"
+    },
+    {
+      "box": [
+        566.44,
+        0.0,
+        877.35,
+        177.34
+      ],
+      "score": 0.88,
+      "cap": "the mans hair is black"
+    },
+    {
+      "box": [
+        346.18,
+        209.78,
+        613.92,
+        401.07
+      ],
+      "score": 0.83,
+      "cap": "a small wooden table"
+    },
+    {
+      "box": [
+        19.88,
+        181.37,
+        224.04,
+        495.23
+      ],
+      "score": 0.79,
+      "cap": "a white door"
+    },
+    {
+      "box": [
+        341.13,
+        221.12,
+        473.57,
+        427.46
+      ],
+      "score": 0.77,
+      "cap": "a black and silver chair"
+    },
+    {
+      "box": [
+        608.65,
+        139.21,
+        825.93,
+        231.74
+      ],
+      "score": 0.75,
+      "cap": "the man has black glasses"
+    },
+    {
+      "box": [
+        9.14,
+        1.88,
+        176.49,
+        187.56
+      ],
+      "score": 0.75,
+      "cap": "a white door with a window"
+    },
+    {
+      "box": [
+        291.48,
+        202.87,
+        526.05,
+        494.38
+      ],
+      "score": 0.75,
+      "cap": "a black and white chair"
+    },
+    {
+      "box": [
+        970.14,
+        312.3,
+        1262.3,
+        450.94
+      ],
+      "score": 0.72,
+      "cap": "a white pillow on a bed"
+    },
+    {
+      "box": [
+        470.4,
+        94.52,
+        578.15,
+        249.52
+      ],
+      "score": 0.68,
+      "cap": "a plant in a white pot"
+    },
+    {
+      "box": [
+        982.67,
+        451.94,
+        1268.72,
+        707.14
+      ],
+      "score": 0.67,
+      "cap": "a black and white pillow"
+    },
+    {
+      "box": [
+        540.56,
+        58.09,
+        929.61,
+        556.66
+      ],
+      "score": 0.64,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        516.44,
+        7.91,
+        1133.23,
+        423.47
+      ],
+      "score": 0.62,
+      "cap": "a man with a black shirt"
+    },
+    {
+      "box": [
+        908.41,
+        309.36,
+        1271.1,
+        686.48
+      ],
+      "score": 0.62,
+      "cap": "a bed with a white comforter"
+    },
+    {
+      "box": [
+        276.66,
+        265.31,
+        427.4,
+        486.96
+      ],
+      "score": 0.61,
+      "cap": "a white toilet"
+    },
+    {
+      "box": [
+        93.59,
+        539.48,
+        286.98,
+        686.06
+      ],
+      "score": 0.58,
+      "cap": "the floor is made of wood"
+    },
+    {
+      "box": [
+        43.11,
+        508.02,
+        351.85,
+        699.13
+      ],
+      "score": 0.57,
+      "cap": "the carpet is brown"
+    },
+    {
+      "box": [
+        624.98,
+        316.33,
+        807.54,
+        495.59
+      ],
+      "score": 0.53,
+      "cap": "the man has a white shirt"
+    },
+    {
+      "box": [
+        185.74,
+        179.68,
+        226.08,
+        224.04
+      ],
+      "score": 0.5,
+      "cap": "a silver door knob"
+    },
+    {
+      "box": [
+        628.19,
+        276.2,
+        809.71,
+        393.73
+      ],
+      "score": 0.46,
+      "cap": "the man has a beard"
+    },
+    {
+      "box": [
+        477.49,
+        188.46,
+        546.9,
+        247.85
+      ],
+      "score": 0.45,
+      "cap": "a plant in a white pot"
+    },
+    {
+      "box": [
+        235.19,
+        135.62,
+        610.79,
+        713.14
+      ],
+      "score": 0.44,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        384.15,
+        165.96,
+        996.08,
+        396.53
+      ],
+      "score": 0.44,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        656.73,
+        266.8,
+        770.19,
+        345.01
+      ],
+      "score": 0.42,
+      "cap": "the mouth of a man"
+    },
+    {
+      "box": [
+        339.64,
+        28.77,
+        610.18,
+        247.59
+      ],
+      "score": 0.41,
+      "cap": "a window in the background"
+    },
+    {
+      "box": [
+        254.65,
+        638.37,
+        524.68,
+        716.55
+      ],
+      "score": 0.39,
+      "cap": "a white napkin"
+    },
+    {
+      "box": [
+        834.91,
+        8.29,
+        1221.79,
+        354.96
+      ],
+      "score": 0.39,
+      "cap": "a white wall"
+    },
+    {
+      "box": [
+        14.28,
+        432.86,
+        469.88,
+        709.32
+      ],
+      "score": 0.38,
+      "cap": "a brown tile floor"
+    },
+    {
+      "box": [
+        516.05,
+        213.06,
+        943.22,
+        444.62
+      ],
+      "score": 0.38,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        303.8,
+        386.17,
+        403.71,
+        465.57
+      ],
+      "score": 0.37,
+      "cap": "a white toilet brush"
+    },
+    {
+      "box": [
+        679.27,
+        381.21,
+        800.74,
+        509.92
+      ],
+      "score": 0.36,
+      "cap": "a white collar on a shirt"
+    },
+    {
+      "box": [
+        175.92,
+        174.13,
+        240.14,
+        235.23
+      ],
+      "score": 0.35,
+      "cap": "a door knob"
+    },
+    {
+      "box": [
+        435.89,
+        52.47,
+        614.62,
+        303.34
+      ],
+      "score": 0.31,
+      "cap": "a lamp on a table"
+    },
+    {
+      "box": [
+        432.56,
+        257.94,
+        1048.73,
+        549.18
+      ],
+      "score": 0.31,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        408.85,
+        200.99,
+        605.3,
+        342.65
+      ],
+      "score": 0.3,
+      "cap": "a table in the room"
+    },
+    {
+      "box": [
+        522.81,
+        289.9,
+        882.38,
+        586.91
+      ],
+      "score": 0.3,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        897.91,
+        265.21,
+        1280.0,
+        525.53
+      ],
+      "score": 0.29,
+      "cap": "a white pillow on a bed"
+    },
+    {
+      "box": [
+        911.45,
+        53.71,
+        1105.88,
+        251.36
+      ],
+      "score": 0.29,
+      "cap": "the wall is white in color"
+    },
+    {
+      "box": [
+        15.99,
+        7.94,
+        263.49,
+        293.59
+      ],
+      "score": 0.28,
+      "cap": "a white door with a handle"
+    },
+    {
+      "box": [
+        243.38,
+        9.0,
+        699.14,
+        488.82
+      ],
+      "score": 0.27,
+      "cap": "a man wearing a white shirt"
+    },
+    {
+      "box": [
+        704.96,
+        206.66,
+        1253.12,
+        699.75
+      ],
+      "score": 0.27,
+      "cap": "a man wearing a blue shirt"
+    },
+    {
+      "box": [
+        486.85,
+        373.3,
+        873.43,
+        685.21
+      ],
+      "score": 0.26,
+      "cap": "a man wearing a white shirt"
+    },
+    {
+      "box": [
+        258.72,
+        4.06,
+        556.06,
+        289.39
+      ],
+      "score": 0.25,
+      "cap": "a white wall"
+    },
+    {
+      "box": [
+        262.81,
+        250.25,
+        483.94,
+        627.41
+      ],
+      "score": 0.25,
+      "cap": "a white toilet"
+    },
+    {
+      "box": [
+        626.71,
+        495.41,
+        723.1,
+        694.28
+      ],
+      "score": 0.24,
+      "cap": "a white shirt collar"
+    },
+    {
+      "box": [
+        605.97,
+        326.45,
+        807.38,
+        681.5
+      ],
+      "score": 0.24,
+      "cap": "a black and white shirt"
+    },
+    {
+      "box": [
+        80.91,
+        450.98,
+        1032.95,
+        707.8
+      ],
+      "score": 0.23,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        21.72,
+        3.11,
+        466.31,
+        522.69
+      ],
+      "score": 0.23,
+      "cap": "a white door with a window"
+    },
+    {
+      "box": [
+        245.98,
+        94.3,
+        481.28,
+        483.1
+      ],
+      "score": 0.22,
+      "cap": "a white toilet"
+    },
+    {
+      "box": [
+        380.4,
+        183.65,
+        604.9,
+        281.09
+      ],
+      "score": 0.22,
+      "cap": "a shelf of books"
+    },
+    {
+      "box": [
+        338.77,
+        195.12,
+        790.17,
+        461.7
+      ],
+      "score": 0.22,
+      "cap": "a black and white photo"
+    },
+    {
+      "box": [
+        697.72,
+        411.97,
+        786.61,
+        491.44
+      ],
+      "score": 0.21,
+      "cap": "a white collar on a shirt"
+    },
+    {
+      "box": [
+        343.58,
+        308.32,
+        697.24,
+        703.53
+      ],
+      "score": 0.21,
+      "cap": "the arm of a man"
+    },
+    {
+      "box": [
+        162.52,
+        10.27,
+        935.82,
+        358.85
+      ],
+      "score": 0.2,
+      "cap": "a window behind the man"
+    },
+    {
+      "box": [
+        403.73,
+        9.17,
+        484.4,
+        233.24
+      ],
+      "score": 0.2,
+      "cap": "a wooden post"
+    },
+    {
+      "box": [
+        290.08,
+        18.76,
+        459.48,
+        207.74
+      ],
+      "score": 0.2,
+      "cap": "light shining on the wall"
+    },
+    {
+      "box": [
+        1151.02,
+        286.15,
+        1274.68,
+        339.71
+      ],
+      "score": 0.2,
+      "cap": "a window in a building"
+    },
+    {
+      "box": [
+        42.83,
+        574.87,
+        255.56,
+        701.99
+      ],
+      "score": 0.2,
+      "cap": "the carpet is brown"
+    },
+    {
+      "box": [
+        649.03,
+        312.01,
+        774.95,
+        363.81
+      ],
+      "score": 0.19,
+      "cap": "the chin of a man"
+    },
+    {
+      "box": [
+        358.4,
+        215.69,
+        431.56,
+        248.09
+      ],
+      "score": 0.19,
+      "cap": "a black handle on a drawer"
+    },
+    {
+      "box": [
+        363.86,
+        239.09,
+        452.51,
+        378.61
+      ],
+      "score": 0.18,
+      "cap": "a black and white chair"
+    },
+    {
+      "box": [
+        366.21,
+        108.13,
+        831.95,
+        603.78
+      ],
+      "score": 0.18,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        601.96,
+        155.23,
+        828.51,
+        322.93
+      ],
+      "score": 0.17,
+      "cap": "the man has a beard"
+    },
+    {
+      "box": [
+        266.28,
+        4.98,
+        853.29,
+        236.71
+      ],
+      "score": 0.17,
+      "cap": "a window behind the man"
+    },
+    {
+      "box": [
+        158.19,
+        511.63,
+        336.66,
+        649.61
+      ],
+      "score": 0.17,
+      "cap": "the floor is made of tile"
+    },
+    {
+      "box": [
+        598.47,
+        174.2,
+        827.72,
+        550.44
+      ],
+      "score": 0.17,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        603.6,
+        135.06,
+        824.3,
+        183.12
+      ],
+      "score": 0.17,
+      "cap": "the grasses of a man"
+    },
+    {
+      "box": [
+        667.12,
+        254.63,
+        757.11,
+        299.21
+      ],
+      "score": 0.17,
+      "cap": "the mouth of a man"
+    },
+    {
+      "box": [
+        290.98,
+        15.04,
+        614.1,
+        156.21
+      ],
+      "score": 0.17,
+      "cap": "a light in the background"
+    },
+    {
+      "box": [
+        444.36,
+        149.51,
+        594.07,
+        298.17
+      ],
+      "score": 0.16,
+      "cap": "a small sharp plant"
+    },
+    {
+      "box": [
+        281.41,
+        662.42,
+        449.01,
+        712.08
+      ],
+      "score": 0.15,
+      "cap": "the plate is white"
+    },
+    {
+      "box": [
+        976.57,
+        383.28,
+        1275.38,
+        500.03
+      ],
+      "score": 0.15,
+      "cap": "a pillow on a bed"
+    },
+    {
+      "box": [
+        825.64,
+        268.84,
+        931.23,
+        378.17
+      ],
+      "score": 0.14,
+      "cap": "a brown teddy bear"
+    },
+    {
+      "box": [
+        431.74,
+        22.13,
+        950.66,
+        290.46
+      ],
+      "score": 0.14,
+      "cap": "a man with a black shirt"
+    },
+    {
+      "box": [
+        27.45,
+        218.51,
+        536.36,
+        719.34
+      ],
+      "score": 0.13,
+      "cap": "a white tile floor"
+    },
+    {
+      "box": [
+        165.97,
+        449.25,
+        615.23,
+        710.73
+      ],
+      "score": 0.13,
+      "cap": "a man wearing a black shirt"
+    },
+    {
+      "box": [
+        268.72,
+        619.81,
+        976.51,
+        714.02
+      ],
+      "score": 0.12,
+      "cap": "the man is wearing a black belt"
+    },
+    {
+      "box": [
+        617.17,
+        156.1,
+        696.19,
+        208.69
+      ],
+      "score": 0.12,
+      "cap": "the eye of a man"
+    },
+    {
+      "box": [
+        439.8,
+        349.14,
+        642.76,
+        683.38
+      ],
+      "score": 0.12,
+      "cap": "the arm of a man"
+    },
+    {
+      "box": [
+        986.75,
+        532.96,
+        1167.32,
+        699.08
+      ],
+      "score": 0.12,
+      "cap": "the pants are black"
+    },
+    {
+      "box": [
+        605.92,
+        181.92,
+        813.57,
+        227.43
+      ],
+      "score": 0.12,
+      "cap": "the eyes of a man"
+    },
+    {
+      "box": [
+        403.04,
+        208.72,
+        467.86,
+        246.85
+      ],
+      "score": 0.11,
+      "cap": "a black and white computer speaker"
+    },
+    {
+      "box": [
+        635.19,
+        422.17,
+        774.6,
+        690.26
+      ],
+      "score": 0.11,
+      "cap": "a black tie"
+    },
+    {
+      "box": [
+        995.06,
+        665.75,
+        1204.27,
+        715.51
+      ],
+      "score": 0.11,
+      "cap": "black and white shoes"
+    },
+    {
+      "box": [
+        646.42,
+        211.54,
+        779.07,
+        372.63
+      ],
+      "score": 0.1,
+      "cap": "the man has a beard"
+    },
+    {
+      "box": [
+        1045.64,
+        60.62,
+        1268.56,
+        448.15
+      ],
+      "score": 0.1,
+      "cap": "a white window curtain"
+    },
+    {
+      "box": [
+        423.34,
+        202.91,
+        479.54,
+        242.28
+      ],
+      "score": 0.09,
+      "cap": "a bottle of water"
+    },
+    {
+      "box": [
+        678.81,
+        24.87,
+        988.8,
+        429.74
+      ],
+      "score": 0.09,
+      "cap": "a man with a beard"
+    },
+    {
+      "box": [
+        579.89,
+        240.42,
+        1176.78,
+        458.35
+      ],
+      "score": 0.09,
+      "cap": "the man is wearing a white shirt"
+    },
+    {
+      "box": [
+        432.67,
+        27.12,
+        474.78,
+        234.24
+      ],
+      "score": 0.08,
+      "cap": "a white door"
+    },
+    {
+      "box": [
+        798.0,
+        164.47,
+        848.8,
+        300.6
+      ],
+      "score": 0.08,
+      "cap": "the ear of a man"
+    },
+    {
+      "box": [
+        733.6,
+        332.48,
+        1076.17,
+        681.0
+      ],
+      "score": 0.08,
+      "cap": "the shirt is white"
+    },
+    {
+      "box": [
+        382.38,
+        45.55,
+        698.41,
+        368.24
+      ],
+      "score": 0.08,
+      "cap": "a man wearing a black shirt"
+    }
+  ]
+}

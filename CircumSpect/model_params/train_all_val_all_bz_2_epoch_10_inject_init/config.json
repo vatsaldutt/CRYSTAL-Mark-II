@@ -1,0 +1,19 @@
+{
+  "backbone_pretrained": true,
+  "return_features": false,
+  "feat_size": 4096,
+  "hidden_size": 512,
+  "max_len": 16,
+  "emb_size": 512,
+  "rnn_num_layers": 1,
+  "vocab_size": 10629,
+  "fusion_type": "init_inject",
+  "detect_loss_weight": 1.0,
+  "caption_loss_weight": 1.0,
+  "lr": 0.0001,
+  "caption_lr": 0.001,
+  "weight_decay": 0.0,
+  "batch_size": 4,
+  "use_pretrain_fasterrcnn": true,
+  "box_detections_per_img": 50
+}

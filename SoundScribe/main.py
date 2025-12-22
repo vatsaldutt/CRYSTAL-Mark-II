@@ -16,16 +16,13 @@ silence_duration = 0
 
 model = whisper.load_model("base")
 
-
 def transcribe():
     result = model.transcribe('recording.wav')
     print(result['text'])
     return result['text']
 
-
 # Open output file for writing
-output_file = sf.SoundFile('recording.wav', mode='w',
-                           samplerate=SAMPLE_RATE, channels=CHANNELS)
+output_file = sf.SoundFile('recording.wav', mode='w', samplerate=SAMPLE_RATE, channels=CHANNELS)
 # Start recording audio
 with sd.InputStream(channels=CHANNELS, blocksize=BLOCKSIZE, samplerate=SAMPLE_RATE) as stream:
     print("RECORDING NOW")
@@ -57,5 +54,4 @@ with sd.InputStream(channels=CHANNELS, blocksize=BLOCKSIZE, samplerate=SAMPLE_RA
                 output_file.close()
                 os.remove('recording.wav')
                 audio_data = None
-                output_file = sf.SoundFile(
-                    'recording.wav', mode='w', samplerate=SAMPLE_RATE, channels=CHANNELS)
+                output_file = sf.SoundFile('recording.wav', mode='w', samplerate=SAMPLE_RATE, channels=CHANNELS)

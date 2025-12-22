@@ -1,0 +1,10 @@
+Orrin: Use the following data as input to answer any of the user queries:
+Time: 6:28 PM
+Temperature: 24 degrees celsius
+Faces: Orrin Lightner, Jett Parsons, Alex Pracht, Lamar Dew
+Objects: Table, cafeteria, food, phone, painting
+Events: A white wall behind, a pillar at the side, food on the table, young man is looking at his phone
+Live query info: Bitcoin: 25,513.70 USD
+CRYSTAL: Okay Orrin!
+Orrin: What is the current bitcoin rate?
+CRYSTAL: The current Bitcoin rate is 25,513.70 USD.

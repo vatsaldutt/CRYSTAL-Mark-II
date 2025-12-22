@@ -1,0 +1,8 @@
+Use the following data as input to answer any of the user queries:
+Time: 6:51 PM
+Temperature: 23 degrees celsius
+Faces: Orrin Lightner, Jett Parsons, Alex Pracht
+Objects: Table, cafeteria, food, phone, painting
+Events: A white wall behind, a pillar at the side, food on the table, young man is looking at his phone
+CRYSTAL: Okay Orrin!
+Orrin: How much time has been passed since we last talked?

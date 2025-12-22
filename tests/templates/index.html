@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Streaming</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('connect', function() {
+            console.log("Connected to server.");
+            socket.emit('start_audio');
+        });
+
+        socket.on('audio_data', function(data) {
+            // Convert the received data to a Float32Array
+            var buffer = new Uint8Array(data['data']);
+            var audioData = new Float32Array(buffer.length / 4);
+            for (var i = 0; i < buffer.length; i += 4) {
+                var value = (buffer[i] << 24) | (buffer[i + 1] << 16) | (buffer[i + 2] << 8) | buffer[i + 3];
+                audioData[i / 4] = (value < 0x80000000) ? value / 0x80000000 : -(0x100000000 - value) / 0x80000000;
+            }
+
+            // Create an audio buffer and play the received audio
+            var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            var source = audioContext.createBufferSource();
+            var audioBuffer = audioContext.createBuffer(1, audioData.length, 44100);
+            audioBuffer.getChannelData(0).set(audioData);
+            source.buffer = audioBuffer;
+            source.connect(audioContext.destination);
+            source.start();
+        });
+    </script>
+</head>
+<body>
+    <h1>Audio Streaming</h1>
+    <p>Open the developer console to see the audio streaming log.</p>
+</body>
+</html>

@@ -1,33 +1,54 @@
 from transformers import LlamaTokenizer, LlamaForCausalLM, GenerationConfig
-from callbacks import Iteratorize, Stream
+from Perceptrix.callbacks import Iteratorize, Stream
 import transformers
 import locale
 import torch
-import time
 import tqdm
 import sys
 import os
 
 locale.getpreferredencoding = lambda: "UTF-8"
 
+# ON MAC: pip3 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+
+if torch.backends.mps.is_available():
+    device = torch.device("mps")
+else:
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+with open('pwd.txt', 'r') as pwd:
+    folder_location = pwd.read()
+
 tokenizer = LlamaTokenizer.from_pretrained(
-    "CRYSTAL-model",
+    f"{folder_location}models/CRYSTAL-model",
     use_fast=False)
 
 
-model = LlamaForCausalLM.from_pretrained(
-    "CRYSTAL-model",
-    load_in_8bit=False,
-    device_map="auto",
-    torch_dtype=torch.float16,
-    low_cpu_mem_usage=True,
-    offload_folder="offload"
-)
+if str(device) == "cuda" or str(device) == "mps":
+    print("Running CRYSTAL using GPU")
+
+    model = LlamaForCausalLM.from_pretrained(
+        f"{folder_location}models/CRYSTAL-model",
+        load_in_8bit=False,
+        device_map="auto",
+        torch_dtype=torch.float16,
+        low_cpu_mem_usage=True,
+    )
+else:
+    print("Running CRYSTAL on CPU")
+
+    model = LlamaForCausalLM.from_pretrained(
+        f"{folder_location}models/CRYSTAL-model",
+        load_in_8bit=False,
+        device_map="cpu",
+        torch_dtype=torch.float32,
+        low_cpu_mem_usage=True,
+    )
 
 
 NOTFIRSTRUN = False
 
-PROMPT = '''### Instruction: 
+PROMPT = '''### Instruction:
 {}
 ### Input:
 {}
@@ -55,7 +76,14 @@ def evaluate(
     **kwargs,
 ):
     inputs = tokenizer(prompt, return_tensors="pt")
-    input_ids = inputs["input_ids"].to("cuda:0")
+
+    if str(device) == "cuda":
+        input_ids = inputs["input_ids"].to("cuda:0")
+    if str(device) == "mps":
+        input_ids = inputs["input_ids"].to("mps:0")
+    else:
+        input_ids = inputs["input_ids"]
+
     generation_config = GenerationConfig(
         temperature=temperature,
         top_p=top_p,
@@ -185,6 +213,8 @@ def bot(
 
 
 def ask_crystal(user_message, chat_history, current_events, username="User"):
+    current_events = "Use the following data as input to answer any of the user queries:\n"+current_events
+    user_message = current_events+"\n"+user_message
     response, updated_chat_history = user(user_message, chat_history)
 
     bot_response_generator = bot(updated_chat_history, current_events, temp, topp,
@@ -194,11 +224,8 @@ def ask_crystal(user_message, chat_history, current_events, username="User"):
         os.system('clear')
 
         bot_response = history[-1][1]
-        with open("reply.txt", 'w') as reply:
+        with open(f"{folder_location}database/reply.txt", 'w') as reply:
             reply.write(bot_response)
-        time.sleep(0.1)
-        with open("reply.txt", 'w') as reply:
-            reply.write("")
 
         print(bot_response)
 
@@ -211,4 +238,8 @@ def chat():
     chat_history = []
     while True:
         events = """Time: 9:33 AM"""
-        response, chat_history = ask_crystal(input("Enter Query: "), chat_history, current_events=events)
+        response, chat_history = ask_crystal(
+            input("Enter Query: "), chat_history, current_events=events)
+
+if __name__ == "__main__":
+    chat()
